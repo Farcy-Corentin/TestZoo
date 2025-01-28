@@ -1,0 +1,72 @@
+/* CAROUSEL REVIEWS */
+.reviews-container {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.reviews-container h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.carousel-content {
+    width: 50%;
+    border-radius: 10px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.carousel-content h3{
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Carousel buttons */
+.btn-carousel {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-carousel:hover {
+    background-color: var(--primary);
+}
+
+/* Create review button */
+.btn-create {
+    margin-top: 1rem;
+}
+
+.btn-create a {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-create a:hover {
+    background-color: var(--primary);
+}
+
+/* REVIEWS LIST */
+

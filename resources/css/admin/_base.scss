@@ -1,0 +1,11 @@
+main {
+    font-family: "Recoleta Alt";
+}
+
+.alert-success{
+    color: var(--success);
+    border: .5rem solid #49a9b4;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-block: 1rem;
+}

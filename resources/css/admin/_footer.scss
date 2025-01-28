@@ -1,0 +1,40 @@
+.bg-logo-footer {
+    background-color: var(--secondary-dark);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title-footer{
+    text-align: center;
+    align-self: center;
+    color: var(--light);
+}
+h4{
+    font-weight: 200 ;
+}
+
+img{
+    margin: 0.5rem;
+}
+
+.bg-footer{
+    background-color: var(--primary-dark);
+    height: 1rem;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+footer{
+    flex-shrink: 0;
+    position: static;
+    bottom: 0;
+}

@@ -1,0 +1,631 @@
+.home-container {
+    background-color: var(--primary-xlight);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 4rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+}
+
+.container {
+    background-color: var(--bg-secondary-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-services {
+    background-color: var(--primary);
+}
+
+.section-services h2 {
+    color: var(--light);
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-content {
+    margin-inline: 1.75rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.card-article {
+    width: 300px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.card-image {
+    background-color: var(--primary-dark);
+    position: relative;
+    margin-bottom: -0.75rem;
+    padding: 0.75rem;
+}
+
+.card-image.savane {
+    background-color: var(--secondary-light);
+}
+
+.card-image.marais {
+    background-color: var(--primary-light);
+}
+
+.card-description {
+    color: var(--bg-secondary-light);
+    padding-bottom: 1rem;
+}
+
+.section-services .card-image {
+    background-color: var(--bg-secondary-light);
+}
+
+.card-img {
+    border-radius: 0.2rem;
+}
+
+.card-data {
+    background-color: var(--primary-dark);
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.card-data.savane {
+    background-color: var(--secondary-light);
+}
+
+.card-data.marais {
+    background-color: var(--primary-light);
+}
+
+.section-services .card-data {
+    background-color: var(--bg-secondary-light);
+}
+
+.card-name {
+    color: var(--secondary-light);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.card-data.savane .card-name {
+    color: var(--secondary-dark);
+}
+
+.card-data.jungle .card-name {
+    color: var(--bg-primary-light);
+}
+
+.card-data.marais .card-name {
+    color: var(--primary-dark);
+}
+
+.section-services .card-name {
+    color: var(--primary-dark);
+}
+
+.card-button {
+    display: inline-block;
+    border: var(--secondary-light) solid 1px;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--secondary-light);
+}
+
+.card-data.savane .card-button {
+    color: var(--light);
+    background-color: var(--secondary-dark);
+    border: none;
+}
+
+.card-data.jungle .card-button {
+    color: var(--light);
+    background-color: var(--primary-xlight);
+    border: none;
+}
+
+.card-data.marais .card-button {
+    color: var(--light);
+    background-color: var(--primary-dark);
+    border: none;
+}
+
+.section-services .card-button {
+    border: var(--primary-dark) solid 1px;
+    color: var(--primary-dark);
+}
+
+.card-button:hover {
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark);
+    font-weight: 500;
+}
+
+.section-services .card-button:hover {
+    background-color: var(--primary-dark);
+    color: var(--bg-primary-light);
+    font-weight: 500;
+}
+
+.section-openings {
+    background-color: var(--primary-dark);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-openings h2 {
+    color: var(--light);
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+
+.section-habitats h2 {
+    color: var(--primary-dark);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+}
+
+/* FORM */
+.form-review {
+    display: flex;
+    margin: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.send {
+    background-color: var(--primary-dark);
+    border: none;
+    border-radius: 8px;
+    color: var(--light);
+    font-size: 20px;
+    font-family: "Recoleta Alt";
+    margin: 1rem 0 1rem 0;
+    padding: 0.4rem 0 0.4rem 0;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    background-color: var(--bg-primary-light);
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-family: "Recoleta Alt";
+    border-radius: .25rem;
+    padding: 0.4rem 0 0.4rem 0;
+}
+
+.rating-icons {
+    display: flex;
+}
+
+.rating-icon {
+    cursor: pointer;
+}
+
+.author-rating{
+    color: var(--primary);
+}
+
+.btn-back {
+    margin-block: 1rem;
+    margin-left: 1rem;
+}
+
+/* Section des services */
+.container-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.div-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.title-services {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.img-services {
+    position: relative;
+}
+
+.image-services {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.description-services {
+    margin-top: 15px;
+    padding: 0 15px;
+}
+
+.p-services {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Styles paire */
+.container-services:nth-child(odd) {
+    color: var(--secondary-dark);
+}
+
+/* impaire */
+.container-services:nth-child(even) {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container-services:nth-child(even) .p-services {
+    color: var(--light);
+}
+
+.title-animals {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.animals-container {
+    display: grid;
+    gap: 3rem;
+}
+
+.animal-card {
+    background-color: var(--secondary-light);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animal-card img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.animal-card h3 {
+    font-size: 1.2em;
+    color: var(--secondary);
+    margin: 10px 0;
+}
+
+.animal-card p {
+    font-size: 1.2em;
+    color: var(--secondary-dark);
+    display: inline-block;
+}
+
+.btn-back {
+    background-color: var(--primary-dark);
+    border-radius: .2rem;
+    margin: 0.5rem;
+    padding: .2rem .5rem;
+    color: var(--light);
+    border: none;
+    font-family: "Recoleta Alt";
+    font-size: 1.2rem;
+}
+
+#legal-notices-container {
+    color: var(--primary-dark);
+    text-align: left;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.title-ln{
+    color: var(--primary);
+    font-weight: 500;
+    margin: 2rem;
+    text-align: center;
+}
+
+h4{
+    margin-top: 2rem;
+}
+.za-footer {
+    color: var(--secondary-light);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Animal Sheet page */
+.animal-sheet-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title-sheet {
+    color: var(--primary-dark);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.content-animal-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--primary);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: -60px;
+}
+
+/* Section animal-sheet image and button */
+.img-modal {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.img-modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.btn-modal {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    background-color: var(--primary-dark);
+    border: none;
+    padding: 8px 25px;
+    border-radius: 1rem;
+}
+
+.btn-modal a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Recoleta Alt";
+}
+
+.btns-animal-sheet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-animal {
+    padding: 20px 0;
+}
+
+.sous-title {
+    color: var(--bg-primary-xlight);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.description-animal p {
+    color: var(--bg-primary-light);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    background-color: var(--primary);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+.btn-back a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.title-contact{
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.form-contact{
+    margin: 1rem;
+}
+
+.form-group{
+    display: grid;
+}
+
+.btn-contact{
+    background-color: var(--primary-dark);
+    color: var(--light);
+    padding: 8px 10px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+input, textarea{
+    padding-left: 0.5rem;
+}
+
+.contact-label{
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-top: 1rem;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.openings-closed{
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.title-openings{
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+/* ------------------------------------ MEDIA QUERIES ------------------------------------*/
+@media (min-width: 768px) {
+    .title-animals {
+        font-size: 2.2rem;
+    }
+
+    .div-services {
+        flex-direction: row;
+        text-align: left;
+        max-width: 100%;
+    }
+    .content-animal-sheet {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .img-modal {
+        flex: 0 0 45%;
+    }
+
+    .description-animal {
+        flex: 1;
+        padding-top: 0;
+    }
+
+    /* Section impaire : image à gauche, texte à droite */
+    .container-services:nth-child(odd) .img-services {
+        order: 1;
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .container-services:nth-child(odd) .description-services {
+        order: 2;
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    /* Section paire : texte à gauche, image à droite */
+    .container-services:nth-child(even) .img-services {
+        order: 2;
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .container-services:nth-child(even) .description-services {
+        order: 1;
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .image-services {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .animals-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colonnes de taille égale */
+        grid-template-rows: repeat(2, auto);
+        gap: 3rem;
+    }
+    .animal-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 488px) and (max-width: 518px) {
+    .animals-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 4 colonnes de taille égale */
+        grid-template-rows: repeat(2, auto);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 519px) and (max-width: 767px) {
+    .animals-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 4 colonnes de taille égale */
+        grid-template-rows: repeat(2, auto);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-article {
+        width: 500px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        padding-bottom: 2rem;
+    }
+}

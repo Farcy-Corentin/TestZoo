@@ -1,0 +1,52 @@
+.admin-form {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+select, input[type="text"] {
+    font-family: "Recoleta Alt";
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-primary-xlight);
+    color: var(--primary-dark);
+}
+
+select:focus, input[type="text"]:focus {
+    border: none;
+}
+
+input[type="text"] {
+    text-align: left;
+}
+
+button.btn-submit {
+    font-family: "Recoleta Alt";
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button.btn-submit:hover {
+    background-color: var(--primary);
+}

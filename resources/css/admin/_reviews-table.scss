@@ -1,0 +1,124 @@
+.review-title{
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-dark);
+    font-size: 2rem;
+}
+
+.table-list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: 'Recoleta Alt';
+    border: 1px solid rgba(143, 188, 172, 0.53);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-list thead {
+    background-color: var(--primary-dark);
+    color: white;
+    font-weight: normal;
+}
+
+.table-list th, .table-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--primary-dark);
+    font-weight: 400;
+}
+
+.table-list tbody tr:nth-child(odd) {
+    background-color: var(--primary-light);
+}
+
+.table-list tbody tr:nth-child(even) {
+    background-color: rgba(143, 188, 172, 0.53);
+}
+
+.table-list tbody tr:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    font-weight: normal;
+}
+
+/* Style responsive */
+@media screen and (max-width: 768px) {
+    .table-list {
+        width: 100%;
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .table-list th, .table-list td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-list thead {
+        display: none;
+    }
+
+    .table-list tbody tr {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .table-list td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table-list td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        padding-left: 10px;
+        font-weight: normal;
+        text-align: left;
+    }
+}
+
+.list-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.reviews-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.send{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.btn-send{
+    color: var(--light);
+    font-size: 1.2rem;
+    background-color: var(--primary-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.btn-send.btn-pending:hover{
+    background-color: var(--primary);
+}
+
+.td-wrap{
+    text-wrap: nowrap;
+}
