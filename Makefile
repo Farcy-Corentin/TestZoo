@@ -1,4 +1,4 @@
-DOCKER_COMPOSE = docker-compose
+DOCKER_COMPOSE = docker compose
 PHP_CONTAINER = app
 NGINX_CONTAINER = nginx-server
 ARTISAN = $(DOCKER_COMPOSE) exec $(PHP_CONTAINER) php artisan
