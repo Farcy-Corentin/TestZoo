@@ -1,3 +1,4 @@
+# Étape 1 : Installation PHP et extensions
 FROM php:8.3-fpm
 
 RUN apt-get update \
@@ -16,22 +17,29 @@ RUN apt-get update \
     && pecl install mongodb \
     && docker-php-ext-enable mongodb
 
+# Étape 2 : Installation Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
 RUN composer -V
 
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-RUN apt-get install -y nodejs
-RUN npm install -g npm
-RUN npm install -g pnpm
+# Étape 3 : Installation Node.js et PNPM
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm pnpm \
+    && pnpm config set store-dir /root/.pnpm-store  # Déplace le cache
 
-workdir /var/www/html
+# Définition du dossier de travail
+WORKDIR /var/www/html
 
+# Copie du projet
 COPY . .
 
-RUN pnpm install
-RUN pnpm build
+# Étape 4 : Installation et build avec PNPM
+RUN pnpm install --frozen-lockfile \
+    && pnpm build \
+    && pnpm store prune  # Nettoie le cache
 
-CMD ["pnpm", "start"]
-
+# Exposition du port
 EXPOSE 8000
+
+# Démarrage de l'application
+CMD ["pnpm", "start"]
