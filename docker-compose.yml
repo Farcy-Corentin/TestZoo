@@ -11,6 +11,15 @@ services:
             - laravel_network
         command: php-fpm
 
+    certbot:
+        image: certbot/certbot
+        container_name: certbot
+        volumes:
+            - ./nginx/certbot/conf:/etc/letsencrypt
+            - ./nginx/certbot/www:/var/www/certbot
+        networks:
+            - laravel_network
+
     nginx:
         image: nginx:alpine
         container_name: nginx_server
@@ -24,6 +33,7 @@ services:
             - "443:443"
         depends_on:
             - app
+            - certbot
         networks:
             - laravel_network
         environment:
