@@ -1,47 +1,48 @@
 services:
     app:
-#        build: OLD VERSION
-#            context: .
-#            dockerfile: Dockerfile
-        image: php:8.3-fpm
-        container_name: app
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: php-app
+        working_dir: /var/www/html
         volumes:
-            - .:/var/www/html
-            - .:/home/debian/laravel-project-arcadia
-        ports:
-            - "9000:9000"
+            - ./:/var/www/html
         networks:
-            - laravel
-        command: /bin/bash -c "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && apt-get update && apt-get install -y git curl unzip libjpeg-dev libpng-dev libwebp-dev libzip-dev libfreetype6-dev libonig-dev zip nodejs npm && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp && docker-php-ext-install pdo_mysql mbstring zip gd && composer install && npm install && npm run build && chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public/build && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public/build && php-fpm"
+            - laravel_network
+        command: php-fpm
+
     nginx:
-        image: nginx:1.27.2-alpine3.20
-        container_name: laravel-nginx
-        restart: always
+        image: nginx:alpine
+        container_name: nginx_server
         volumes:
+            - ./:/var/www/html
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-            - .:/var/www/html
         ports:
-            - "443:443" # Port HTTPS
-            - "8080:80" # Port Http
+            - "9001:80"
         depends_on:
             - app
-        networks:
-            - laravel
-    mongo:
-        image: mongo:8.0
-        container_name: laravel_mongo
         environment:
-            MONGO_INITDB_ROOT_USERNAME: mongo_root
-            MONGO_INITDB_ROOT_PASSWORD: mongo_password
-        ports:
-            - "27017:27017"
-        volumes:
-            - mongodata:/data/db
+            - SERVER_NAME=${APP_DOMAIN}
         networks:
-            - laravel
-volumes:
-    mongodata:
+            - laravel_network
+
+    mongo:
+        image: mongo:8
+        container_name: mongo_db
+        ports:
+            - "27018:27017"
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+        volumes:
+            - mongo_data:/data/db
+            - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+        networks:
+            - laravel_network
 
 networks:
-    laravel:
+    laravel_network:
         driver: bridge
+
+volumes:
+    mongo_data:
