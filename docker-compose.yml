@@ -30,16 +30,6 @@ services:
             - SERVER_NAME=${APP_DOMAIN}
             - PORT=${APP_PORT}
 
-    certbot:
-        image: certbot/certbot
-        container_name: certbot
-        volumes:
-            - ./nginx/certbot/conf:/etc/letsencrypt
-            - ./nginx/certbot/www:/var/www/certbot
-        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-        networks:
-            - laravel_network
-
     mongo:
         image: mongo:8
         container_name: mongo_db
